@@ -23,8 +23,8 @@ public class MybatisMain {
 			TestMapper mapper = session.getMapper(TestMapper.class);
 		
 			// id="select"
-			Test t1 = mapper.select(1);
-			System.out.println(t1.getId() + ":" + t1.getName());
+			//Test t1 = mapper.select(1);
+			//System.out.println(t1.getId() + ":" + t1.getName());
 		
 			// id="insert"
 			Test t2 = new Test();
