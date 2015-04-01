@@ -2,18 +2,21 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- namespaceには対応するinterfaceを書かなければならない -->
 <mapper namespace="jp.cp.newdaysys.Interface.TestMapperInf">
-  <!-- 
-  <select id="select" resultType="test.mybatis.Test">
+
+  <select id="select" resultType="jp.cp.newdaysys.sample.Test">
     select * from aaa where id = #{id}
   </select>
-   -->
-  <select id="selectALL" resultType="List">
+  
+   <!-- id：namespaceのinterfaceの対応するメソッドを指定 -->
+   <!-- resultType：は受け取るデータ型(クラス)を指定 -->
+  <select id="selectALL" resultType="jp.cp.newdaysys.sample.Test">
     select * from AAA
   </select>
-  <!-- 
-  <insert id="insert" parameterType="test.mybatis.Test">
+  
+  <insert id="insert" parameterType="jp.cp.newdaysys.sample.Test">
     insert into aaa values (#{id}, #{name})
   </insert>
-   -->
+  
 </mapper>

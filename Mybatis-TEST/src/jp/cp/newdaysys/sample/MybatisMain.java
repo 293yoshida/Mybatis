@@ -24,14 +24,14 @@ public class MybatisMain {
 			TestMapperInf mapper = session.getMapper(TestMapperInf.class);
 		
 			// id="select"
-			//Test t1 = mapper.select(1);
-			//System.out.println(t1.getId() + ":" + t1.getName());
+			Test t1 = mapper.select(1);
+			System.out.println(t1.getId() + ":" + t1.getName());
 		
 			// id="insert"
-			//Test t2 = new Test();
-			//t2.setId(3);
-			//t2.setName("oro");
-			//mapper.insert(t2);
+			Test t2 = new Test();
+			t2.setId(3);
+			t2.setName("oro");
+			mapper.insert(t2);
 		
 			// id="selectALL"
 			List<Test> list = mapper.selectALL();
