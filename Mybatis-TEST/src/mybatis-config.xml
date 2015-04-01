@@ -15,6 +15,6 @@
     </environment>
   </environments>
   <mappers>
-    <mapper resource="config/TestMapper.xml"/>
+    <mapper resource="jp/co/newdaysys/xml/TestMapper.xml"/>
   </mappers>
 </configuration>

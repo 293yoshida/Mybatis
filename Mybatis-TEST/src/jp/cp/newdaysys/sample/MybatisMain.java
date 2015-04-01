@@ -16,7 +16,7 @@ public class MybatisMain {
 		// TODO 自動生成されたメソッド・スタブ
 		FileInputStream fis;
 		try {
-			fis = new FileInputStream("config\\mybatis-config.xml");
+			fis = new FileInputStream("src\\mybatis-config.xml");
 		
 			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(fis);
 			SqlSession session = sqlSessionFactory.openSession(true);
