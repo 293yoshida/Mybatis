@@ -4,7 +4,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.List;
 
-import jp.cp.newdaysys.Interface.TestMapper;
+import jp.cp.newdaysys.Interface.TestMapperInf;
+import jp.cp.newdaysys.Interface.TestMapperInf;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -20,17 +21,17 @@ public class MybatisMain {
 		
 			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(fis);
 			SqlSession session = sqlSessionFactory.openSession(true);
-			TestMapper mapper = session.getMapper(TestMapper.class);
+			TestMapperInf mapper = session.getMapper(TestMapperInf.class);
 		
 			// id="select"
 			//Test t1 = mapper.select(1);
 			//System.out.println(t1.getId() + ":" + t1.getName());
 		
 			// id="insert"
-			Test t2 = new Test();
-			t2.setId(3);
-			t2.setName("oro");
-			mapper.insert(t2);
+			//Test t2 = new Test();
+			//t2.setId(3);
+			//t2.setName("oro");
+			//mapper.insert(t2);
 		
 			// id="selectALL"
 			List<Test> list = mapper.selectALL();
